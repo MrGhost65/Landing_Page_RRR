@@ -1,4 +1,37 @@
 /* =========================
+   FUENTES PERSONALIZADAS
+========================= */
+
+@font-face {
+    font-family: 'yellow_bananaregular';
+    src: url('yellow_banana-webfont.woff2') format('woff2'),
+         url('yellow_banana-webfont.woff') format('woff'),
+         url('yellow_banana-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =========================
+   VARIABLES DE DISEÑO
+========================= */
+
+:root {
+    --space-sm: 8px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+
+    --font-size-base: 16px;
+    --font-size-lg: 20px;
+    --font-size-2xl: 32px;
+    --font-size-3xl: 48px;
+
+    --color-text-muted: #412706ce;
+}
+
+
+/* =========================
    GENERAL
 ========================= */
 
@@ -13,8 +46,8 @@ html {
 }
 
 body {
-    font-family: "Nunito", sans-serif;
-    color: #222;
+    font-family: 'yellow_bananaregular', sans-serif, system-ui;
+    color: #494848dc;
     background: rgb(161, 241, 126);
 }
 
@@ -23,26 +56,22 @@ a {
 }
 
 
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
-    height: 72px;
-
+    min-height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 0 7%;
-
     background: rgba(65, 141, 30, 0.37);
-
     position: sticky;
     top: 0;
-
     z-index: 1000;
-
-    box-shadow: 0 2px 15px rgba(0,0,0,.12);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
 }
-
 
 .logo {
     font-size: 25px;
@@ -53,7 +82,6 @@ a {
 .logo span {
     color: #2b2205;
 }
-
 
 nav {
     display: flex;
@@ -68,598 +96,671 @@ nav a {
 
 nav a::after {
     content: "";
-
     position: absolute;
-
     width: 0;
     height: 3px;
-
     left: 0;
     bottom: -8px;
-
-    background: #1853c2;
-
-    transition: .3s;
+    background: #18c226;
+    transition: 0.3s;
 }
 
 nav a:hover::after {
     width: 100%;
 }
 
-
-.menu-btn {
+.menu-toggle {
     display: none;
-
     border: none;
     background: none;
-
     font-size: 27px;
-
     cursor: pointer;
 }
 
 
-
+/* =========================
+   HERO - MOBILE FIRST
+========================= */
 
 .hero {
     min-height: 620px;
-
-    padding: 80px 9%;
+    padding: var(--space-xl) var(--space-sm);
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    background:
-        linear-gradient(
-            115deg,
-            #7fc53d 0%,
-            #fff 54%,
-            #eeeeef 54%,
-            #509fe9 100%
-        );
+    background: linear-gradient(
+        115deg,
+        #7fc53d 0%,
+        #fff 54%,
+        #eeeeef 54%,
+        #509fe9 100%
+    );
 
     overflow: hidden;
 }
 
-
 .hero-text {
-    width: 55%;
+    width: 100%;
+    text-align: center;
 }
 
-
 .subtitle {
-    color: #523509;
-
+    color: #53524f;
     font-size: 12px;
-
     font-weight: 900;
-
     letter-spacing: 3px;
-
     margin-bottom: 15px;
 }
 
-
 .hero h1 {
-    font-size: clamp(55px, 7vw, 95px);
-
-    line-height: .88;
-
-    letter-spacing: -5px;
-
+    font-size: clamp(36px, 8vw, 55px);
+    line-height: 1.05;
+    letter-spacing: -2px;
     font-weight: 900;
 }
-
 
 .hero h1 span {
     color: #1853c2;
 }
 
-
 .description {
     max-width: 520px;
-
-    color: #412706ce;
-
-    font-size: 18px;
-
+    color: var(--color-text-muted);
+    font-size: var(--font-size-base);
     line-height: 1.6;
-
-    margin: 30px 0;
+    margin: 20px auto;
 }
-
 
 .hero-buttons {
     display: flex;
-
+    justify-content: center;
     gap: 15px;
-
     flex-wrap: wrap;
 }
 
 
-
+/* =========================
+   BOTONES
+========================= */
 
 .btn {
     display: inline-block;
-
     padding: 15px 28px;
-
     border-radius: 50px;
-
     font-weight: 900;
-
-    transition: .25s;
+    transition: 0.25s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.18);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
-
 .btn-red {
-    color: rgba(99, 62, 21, 0.76);
-
+    color: rgba(80, 78, 75, 0.76);
     background: #4dc73c;
 }
 
-
 .btn-outline {
     color: #1166e6;
-
     border: 2px solid #0b86be;
 }
 
 
-
-
-    
-
-
-
+/* =========================
+   CARACTERÍSTICAS
+========================= */
 
 .features {
     background: #3165d4d7;
-
-    color: rgb(77, 51, 12);
+    color: rgb(73, 71, 67);
 
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 35px;
-
     padding: 35px 9%;
 }
 
-
 .feature {
     display: grid;
-
-    grid-template-columns:
-        50px 1fr;
+    grid-template-columns: 50px 1fr;
+    gap: 10px;
 }
-
 
 .feature strong {
     color: #aee79ddc;
-
     font-size: 28px;
 }
-
 
 .feature h3 {
     font-size: 17px;
 }
 
-
 .feature p {
-    color: #42230a;
-
+    color: #42403e;
     font-size: 13px;
-
     margin-top: 5px;
 }
 
 
-
+/* =========================
+   SECCIONES GENERALES
+========================= */
 
 .section {
     padding: 100px 9%;
 }
 
-
 .section-title {
     text-align: center;
-
     margin-bottom: 50px;
 }
 
-
 .section-title p {
-    color: oklch(29.573% 0.184 270.171);
-
+    color: #1e3a8a;
     font-size: 12px;
-
     font-weight: 900;
-
     letter-spacing: 3px;
 }
 
-
 .section-title h2 {
     font-size: 52px;
-
     letter-spacing: -2px;
-
     margin: 8px 0;
 }
-
 
 .section-title span {
     color: #140aad;
 }
 
 
-
+/* =========================
+   TARJETAS
+========================= */
 
 .cards {
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-
 .card {
-    background: hsla(0, 0%, 0%, 0.945);
-
+    background: hsla(0, 4%, 55%, 0.959);
+    color: white;
     padding: 35px;
-
     text-align: center;
-
     border-radius: 22px;
-
-    transition: .25s;
+    transition: 0.25s;
 }
-
 
 .card:hover {
     transform: translateY(-7px);
 }
 
-
 .avatar {
     width: 75px;
     height: 75px;
-
     border-radius: 50%;
 
     display: grid;
-
     place-items: center;
 
-    margin: auto;
-
-    margin-bottom: 20px;
-
-    background: #532a09;
-
+    margin: 0 auto 20px;
+    background: #575655;
     color: white;
-
     font-weight: 900;
 }
 
-
 .card h3 {
+    color: white;
     margin-bottom: 10px;
 }
 
-
 .card p {
     color: #fff8f8;
-
     line-height: 1.5;
 }
 
 
+/* =========================
+   DESCARGA
+========================= */
 
 .download {
     padding: 100px 9%;
-
-    background: #381c0b;
+    background: #888b8f;
 }
-
 
 .download-content {
     background: #8ff176e3;
-
-    color: rgb(36, 22, 9);
+    color: rgb(8, 8, 8);
 
     padding: 55px 7%;
-
     border-radius: 30px;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 30px;
 }
 
-
 .download-content > div > p {
     font-size: 12px;
-
     font-weight: 900;
-
     letter-spacing: 3px;
 }
 
-
 .download-content h2 {
     font-size: 42px;
-
     line-height: 1;
-
     margin: 12px 0;
 }
-
 
 .download-content span {
     color: #2c1b0a;
 }
 
-
 .download-btn {
     background: rgb(131, 213, 238);
-
     color: #222;
-
     white-space: nowrap;
 }
 
 
-
+/* =========================
+   ACTUALIZACIONES
+========================= */
 
 .updates {
     max-width: 950px;
-
     margin: auto;
 }
 
-
 .update {
     display: grid;
-
-    grid-template-columns:
-        110px 1fr 130px;
-
+    grid-template-columns: 110px 1fr 130px;
     gap: 25px;
-
     padding: 25px 0;
-
     border-top: 1px solid #ddd;
 }
-
 
 .update:last-child {
     border-bottom: 1px solid #ddd;
 }
 
-
 .version {
     color: #1137e2;
-
     font-weight: 900;
 }
-
 
 .update h3 {
     margin-bottom: 5px;
 }
 
-
 .update p {
     color: #2c1508;
 }
 
-
 .update time {
     text-align: right;
-
     color: #777;
-
     font-size: 12px;
-
     font-weight: 900;
 }
 
 
+/* =========================
+   FORMULARIO DE CONTACTO & ACCESIBILIDAD
+========================= */
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: 800;
+    color: #222;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.error-message {
+    color: #b91c1c;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border: 2px solid #b91c1c !important;
+    background-color: #fef2f2;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #171717;
-
     color: rgb(76, 9, 184);
-
     text-align: center;
-
     padding: 60px 9%;
 }
 
-
 .footer-logo {
     font-size: 30px;
-
     font-weight: 900;
-
     margin-bottom: 15px;
 }
-
 
 .footer-logo span {
     color: #be0f3b;
 }
 
-
 footer p {
     color: #ffffff;
-
     font-size: 13px;
 }
 
-
 .footer-links {
     display: flex;
-
     justify-content: center;
-
     gap: 25px;
-
     margin: 25px 0;
 }
 
-
 .footer-links a {
     color: white;
-
     font-size: 14px;
-
     font-weight: 700;
 }
-
 
 .footer-links a:hover {
     color: #e60012;
 }
 
-
 footer small {
-    color: #666;
+    color: #999;
 }
 
 
+/* =========================
+   TABLETAS
+========================= */
+
+@media (min-width: 768px) {
+    .hero {
+        min-height: 620px;
+        padding: var(--space-2xl) var(--space-lg);
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .hero h1 {
+        font-size: clamp(55px, 7vw, 80px);
+        line-height: 0.95;
+        letter-spacing: -3px;
+    }
+
+    .description {
+        font-size: var(--font-size-lg);
+        max-width: 600px;
+        margin: 30px auto;
+    }
+
+    .section-title h2 {
+        font-size: 46px;
+    }
+}
 
 
-@media(max-width: 850px) {
+/* =========================
+   COMPUTADORAS
+========================= */
 
+@media (min-width: 1024px) {
+    .hero {
+        justify-content: flex-start;
+        padding: 80px 9%;
+    }
+
+    .hero-text {
+        width: 55%;
+        max-width: none;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: clamp(55px, 7vw, 95px);
+        line-height: 0.88;
+        letter-spacing: -5px;
+    }
+
+    .description {
+        max-width: 520px;
+        font-size: 18px;
+        margin: 30px 0;
+    }
+
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================
+   PANTALLAS DE 850px O MENOS
+========================= */
+
+@media (max-width: 850px) {
     .navbar {
         padding: 0 6%;
     }
 
-
     nav {
         display: none;
-
         position: absolute;
-
         top: 72px;
-
         left: 0;
-
         width: 100%;
-
-        background: white;
-
+        background: #fff;
         flex-direction: column;
-
         padding: 25px;
-
         gap: 20px;
-
-        box-shadow:
-            0 8px 15px rgba(0,0,0,.1);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
 
-
-    nav.active {
+    nav.nav-open {
         display: flex;
     }
 
+    nav a {
+        color: #1853c2;
+    }
 
-    .menu-btn {
+    .menu-toggle {
         display: block;
     }
-
-
-    .hero {
-        padding: 70px 7%;
-    }
-
-
-    .hero-text {
-        width: 100%;
-    }
-
-
-    .hero-image {
-        display: none;
-    }
-
 
     .features {
         grid-template-columns: 1fr;
     }
 
-
     .cards {
         grid-template-columns: 1fr;
     }
 
-
     .download-content {
-        display: block;
+        flex-direction: column;
+        align-items: flex-start;
     }
-
 
     .download-btn {
-        margin-top: 25px;
+        margin-top: 10px;
     }
-
 
     .update {
         grid-template-columns: 1fr;
-
         gap: 8px;
     }
-
 
     .update time {
         text-align: left;
     }
-
 }
 
 
-@media(max-width: 600px) {
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 600px) {
+    .navbar {
+        min-height: 65px;
+    }
+
+    nav {
+        top: 65px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 65px 20px;
+    }
 
     .hero h1 {
-        font-size: 55px;
-
-        letter-spacing: -3px;
+        font-size: clamp(34px, 10vw, 55px);
+        letter-spacing: -2px;
+        line-height: 1;
     }
 
+    .subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .description {
+        font-size: 16px;
+        margin: 22px auto;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
 
     .section-title h2 {
-        font-size: 40px;
+        font-size: 36px;
+        letter-spacing: -1px;
     }
 
+    .section-title p {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .card {
+        padding: 28px 20px;
+    }
+
+    .download {
+        padding: 55px 6%;
+    }
+
+    .download-content {
+        padding: 35px 25px;
+        border-radius: 22px;
+    }
 
     .download-content h2 {
         font-size: 32px;
+        line-height: 1.1;
     }
 
+    .download-content > div > p {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .download-btn {
+        white-space: normal;
+    }
 
     .footer-links {
         flex-wrap: wrap;
+        gap: 15px;
     }
 
+    footer {
+        padding: 45px 6%;
+    }
+}
+
+
+/* =========================
+   CELULARES PEQUEÑOS (375px/380px)
+========================= */
+
+@media (max-width: 380px) {
+    .logo {
+        font-size: 21px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .download-content h2 {
+        font-size: 28px;
+    }
 }

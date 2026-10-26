@@ -1,20 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>RRR</title>
-
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
 
-  
     <header class="navbar">
-
         <a href="#inicio" class="logo">
             RR<span>R</span>
         </a>
@@ -24,354 +19,195 @@
             <a href="#creditos">Créditos</a>
             <a href="#descarga">Descarga</a>
             <a href="#actualizaciones">Actualizaciones</a>
+            <a href="#contacto">Contacto</a>
         </nav>
 
-        <button class="menu-btn" id="menuBtn">
+        <!-- Botón Hamburguesa con accesibilidad ARIA -->
+        <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú de navegación" aria-controls="nav">
             ☰
         </button>
-
     </header>
 
-
     <section id="inicio" class="hero">
-
         <div class="hero-text">
-
-            <p class="subtitle">
-                RECICLA CON EKO
-            </p>
-
+            <p class="subtitle">RECICLA CON EKO</p>
             <h1>
                 Aprende a<br>
                 <span>Reciclar con</span><br>
                 Nosotros
             </h1>
-
             <p class="description">
                 Empieza a reciclar con nuestro amigo EKO
             </p>
 
-              <img src="Images/ACRwjatopI05GYDSk9GVQ6cvFE8wvP0rLCVtKeD_ViBo1a5dtwtlc0aZ59PHrqztdJP0neFkrWQrk9yyUk6VYUIAZHI4Izb4BViOfxSioEsh9LaBrClNsZIBbIz2yFWlzCFzcFQUnqR3ajMMG0KwyFZuWFoFuCYb74CYkHyEJJ5FKlNJ4w4vMF2JxAf7AB1I4T0z_5GYttFJqacJOPZUB.webp" alt="Descripción de la imagen" width="400px" height="350px" />
+            <img src="" alt="Descripción de la imagen" width="400" height="350" />
 
             <div class="hero-buttons">
-
-                <a href="#descarga" class="btn btn-red">
-                    Empieza ahora
-                </a>
-
-                <a href="#actualizaciones" class="btn btn-outline">
-                    Actualizaciones
-                </a>
-
+                <a href="#descarga" class="btn btn-red">Empieza ahora</a>
+                <a href="#actualizaciones" class="btn btn-outline">Actualizaciones</a>
             </div>
-
         </div>
 
-
         <div class="hero-image">
-
             <div class="red-circle"></div>
-
             <div class="controller">
-
                 <div class="joystick"></div>
-
                 <div class="dpad">
                     <span></span>
                 </div>
-
                 <div class="controller-buttons">
                     ● ●
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-    
-
 
     <section class="features">
-
         <div class="feature">
-
             <strong>01</strong>
-
             <div>
                 <h2>Actualizaciones</h2>
-                <p>
-                    Navega por la pagina para estar atento a nuestras actualizaciones.
-                </p>
+                <p>Navega por la página para estar atento a nuestras actualizaciones.</p>
             </div>
-
         </div>
 
-        
-
-
         <div class="feature">
-
             <strong>02</strong>
-
             <div>
                 <h3>Conoce a EKO</h3>
-                <p>
-                    Conoce mas sobre nuestro amigo EKO y aprende sobre el reciclaje con el.
-                </p>
+                <p>Conoce más sobre nuestro amigo EKO y aprende sobre el reciclaje con él.</p>
             </div>
-
         </div>
-
 
         <div class="feature">
-
             <strong>03</strong>
-
             <div>
                 <h3>Descargas de juego</h3>
-                <p>
-                    Descarga siempre la última versión de nuestro juego y disfruta de la experiencia completa.
-                </p>
+                <p>Descarga siempre la última versión de nuestro juego y disfruta de la experiencia completa.</p>
             </div>
-
         </div>
-
     </section>
-
-
 
     <section id="creditos" class="section">
-
         <div class="section-title">
-
             <p>JBJ Studio</p>
-
             <h2>Créditos</h2>
-
             <span>
                 Joab García de la Mora - Diseño y desarrollo<br>
-                Jonatan Aquino Arroyave - Arte y producción<br>
+                Jonathan Aquino Arroyave - Arte y producción<br>
             </span>
-
         </div>
-
 
         <div class="cards">
-
             <div class="card">
-
-                <div class="avatar">
-                    Jonatan Aquino
-                </div>
-
+                <div class="avatar">Jona Aquino</div>
                 <h3>Diseño</h3>
-
-                <p>
-                    Diseño visual y experiencia
-                    de usuario.
-                </p>
-
+                <p>Diseño visual y experiencia de usuario.</p>
             </div>
 
-
             <div class="card">
-
-                <div class="avatar">
-                    Joab García
-                </div>
-
+                <div class="avatar">Joab García</div>
                 <h3>Desarrollo</h3>
-
-                <p>
-                    Programación y desarrollo
-                    del proyecto.
-                </p>
-
+                <p>Programación y desarrollo del proyecto.</p>
             </div>
-
 
             <div class="card">
-
-                <div class="avatar">
-                    QA
-                </div>
-
+                <div class="avatar">QA</div>
                 <h3>Pruebas</h3>
-
-                <p>
-                    Control de calidad y
-                    compatibilidad.
-                </p>
-
+                <p>Control de calidad y compatibilidad.</p>
             </div>
-
         </div>
-
     </section>
-
 
     <section id="descarga" class="download">
-
         <div class="download-content">
-
             <div>
-
                 <p>DESCARGA</p>
-
-                <h2>
-                    Obtén la última versión
-                </h2>
-
-                <span>
-                    Descarga nuestro proyecto
-                    directamente desde nuestra página.
-                </span>
-
+                <h2>Obtén la última versión</h2>
+                <span>Descarga nuestro proyecto directamente desde nuestra página.</span>
             </div>
-
-
-            <a
-                href="mi-proyecto.zip"
-                download
-                class="btn download-btn">
-
-                Descargar ZIP
-
-            </a>
-
+            <a href="mi-proyecto.zip" download class="btn download-btn">Descargar ZIP</a>
         </div>
-
     </section>
-
 
     <section id="actualizaciones" class="section">
-
         <div class="section-title">
-
             <p>NOVEDADES</p>
-
             <h2>Actualizaciones</h2>
-
-            <span>
-                Historial de versiones.
-            </span>
-
+            <span>Historial de versiones.</span>
         </div>
-
 
         <div class="updates">
-
-
             <div class="update">
-
-                <div class="version">
-                    v0.1.3
-                </div>
-
+                <div class="version">v0.1.3</div>
                 <div>
-
                     <h3>Nueva interfaz</h3>
-
-                    <p>
-                        Se mejoró el diseño y la navegación
-                        de la página.
-                    </p>
-
+                    <p>Se mejoró el diseño y la navegación de la página.</p>
                 </div>
-
-                
-                    07 OCT 2026
-                
-
+                <time>07 OCT 2026</time>
             </div>
 
-
             <div class="update">
-
-                <div class="version">
-                    v0.1.2
-                </div>
-
+                <div class="version">v0.1.2</div>
                 <div>
-
                     <h3>Sistema de descargas</h3>
-
-                    <p>
-                        Se agregó una nueva sección
-                        para descargar archivos.
-                    </p>
-
+                    <p>Se agregó una nueva sección para descargar archivos.</p>
                 </div>
-
-               
-                    29 SEP 2026
-                
-
+                <time>29 SEP 2026</time>
             </div>
-
 
             <div class="update">
-
-                <div class="version">
-                    v0.1.0
-                </div>
-
+                <div class="version">v0.1.0</div>
                 <div>
-
                     <h3>Lanzamiento inicial</h3>
-
-                    <p>
-                        Primera versión pública
-                        del proyecto.
-                    </p>
-
+                    <p>Primera versión pública del proyecto.</p>
                 </div>
-
-              
-                    20 DIC 2026
-              
-
+                <time>20 DIC 2026</time>
             </div>
-
         </div>
-
     </section>
 
-
-   
-    <footer>
-
-        <div class="footer-logo">
-            JBJ<span>Studio</span>
+    <!-- Sección del Formulario de Contacto (Ejercicio 2) -->
+    <section id="contacto" class="section">
+        <div class="section-title">
+            <p>ESCRÍBENOS</p>
+            <h2>Contacto</h2>
         </div>
 
-        <p>
-            Proyecto independiente.
-        </p>
+        <form id="contactForm" novalidate class="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-red">Enviar mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-logo">JBJ<span>Studio</span></div>
+        <p>Proyecto independiente.</p>
 
         <div class="footer-links">
-
             <a href="#inicio">Inicio</a>
-
             <a href="#creditos">Créditos</a>
-
             <a href="#descarga">Descarga</a>
-
-            <a href="#actualizaciones">
-                Actualizaciones
-            </a>
-
+            <a href="#actualizaciones">Actualizaciones</a>
+            <a href="#contacto">Contacto</a>
         </div>
 
-        <small>
-            © 2026 JBJ Studio
-        </small>
-
+        <small>© 2026 JBJ Studio</small>
     </footer>
-
 
 </body>
 </html>
-
