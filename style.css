@@ -302,7 +302,7 @@ nav a:hover::after {
 }
 
 .avatar {
-    width: 75px;
+    width: 105px;
     height: 75px;
     border-radius: 50%;
 
@@ -367,6 +367,51 @@ nav a:hover::after {
 .download-btn {
     background: rgb(131, 213, 238);
     color: #222;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   EXTRAS
+========================= */
+
+.extras {
+    padding: 100px 9%;
+    background: #0a0114;
+}
+
+.extras-content {
+    background: #000000e3;
+    color: rgb(255, 255, 255);
+
+    padding: 55px 7%;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.extras-content > div > p {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.extras-content h2 {
+    font-size: 42px;
+    line-height: 1;
+    margin: 12px 0;
+}
+
+.extras-content span {
+    color: #2c1b0a;
+}
+
+.extras-btn {
+    background: rgb(5, 18, 202);
+    color: #000000;
     white-space: nowrap;
 }
 
