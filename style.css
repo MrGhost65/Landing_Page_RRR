@@ -80,7 +80,7 @@ a {
 }
 
 .logo span {
-    color: #2b2205;
+    color: #1a1919;
 }
 
 nav {
@@ -134,7 +134,7 @@ nav a:hover::after {
         115deg,
         #7fc53d 0%,
         #fff 54%,
-        #eeeeef 54%,
+        #fff 54%,
         #509fe9 100%
     );
 
@@ -162,7 +162,7 @@ nav a:hover::after {
 }
 
 .hero h1 span {
-    color: #1853c2;
+    color: #509fe9;
 }
 
 .description {
@@ -206,8 +206,8 @@ nav a:hover::after {
 }
 
 .btn-outline {
-    color: #1166e6;
-    border: 2px solid #0b86be;
+    color: #509fe9;
+    border: 2px solid #509fe9;
 }
 
 
@@ -216,7 +216,7 @@ nav a:hover::after {
 ========================= */
 
 .features {
-    background: #3165d4d7;
+    background: #509fe9;
     color: rgb(73, 71, 67);
 
     display: grid;
@@ -289,7 +289,7 @@ nav a:hover::after {
 }
 
 .card {
-    background: hsla(0, 4%, 55%, 0.959);
+    background: hsla(212, 91%, 66%, 0.959);
     color: white;
     padding: 35px;
     text-align: center;
@@ -310,8 +310,8 @@ nav a:hover::after {
     place-items: center;
 
     margin: 0 auto 20px;
-    background: #575655;
-    color: white;
+    background: #49f743;
+    color: rgb(71, 71, 71);
     font-weight: 900;
 }
 
@@ -332,7 +332,7 @@ nav a:hover::after {
 
 .download {
     padding: 100px 9%;
-    background: #888b8f;
+    background: #509fe9;
 }
 
 .download-content {
@@ -375,44 +375,35 @@ nav a:hover::after {
    EXTRAS
 ========================= */
 
-.extras {
-    padding: 100px 9%;
-    background: #0a0114;
-}
-
-.extras-content {
-    background: #000000e3;
-    color: rgb(255, 255, 255);
-
-    padding: 55px 7%;
-    border-radius: 30px;
-
+.footer-RRR {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    padding: 40px 5%;
+    border-top: 1px solid #12313a;
+    background: #080b0e;
 }
 
-.extras-content > div > p {
+.footer-RRR p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #777;
+    font-family: 'Black Ops One', cursive;
     font-size: 12px;
-    font-weight: 900;
     letter-spacing: 3px;
 }
 
-.extras-content h2 {
-    font-size: 42px;
-    line-height: 1;
-    margin: 12px 0;
+.footer-RRR img {
+    width:200px;
+    height: 200px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.extras-content span {
-    color: #2c1b0a;
-}
-
-.extras-btn {
-    background: rgb(5, 18, 202);
-    color: #000000;
-    white-space: nowrap;
+.footer-RRR img:hover {
+    transform: scale(2);
 }
 
 
